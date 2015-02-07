@@ -1,0 +1,685 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="#ff02243e">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Team #:"
+        android:id="@+id/teamlabel"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffc8c8c8" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/TeamNumber"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/teamlabel"
+        android:textColor="#ff000000"
+        android:maxLines="1"
+        android:maxLength="4"
+        android:background="#ffc8c8c8"
+        android:layout_alignRight="@+id/space"
+        android:layout_alignEnd="@+id/space"
+        android:layout_alignLeft="@+id/MatchNumber"
+        android:layout_alignStart="@+id/MatchNumber" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Match #:"
+        android:id="@+id/matchLabel"
+        android:layout_below="@+id/teamlabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffafafaf" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/MatchNumber"
+        android:layout_below="@+id/teamlabel"
+        android:layout_alignBottom="@+id/matchLabel"
+        android:textColor="#ff000000"
+        android:maxLength="3"
+        android:maxLines="1"
+        android:background="#ffafafaf"
+        android:layout_alignRight="@+id/space"
+        android:layout_alignEnd="@+id/space"
+        android:layout_toRightOf="@+id/matchLabel"
+        android:layout_toEndOf="@+id/matchLabel" />
+
+    <Space
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/matchLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/space2" />
+
+    <Space
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/matchLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Space
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/matchLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Space
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/MatchNumber"
+        android:layout_toRightOf="@+id/matchLabel"
+        android:layout_toEndOf="@+id/matchLabel"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:id="@+id/space" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tote 6"
+        android:id="@+id/tote6"
+        android:onClick="tote6Change"
+        android:background="#ffc8c8c8"
+        android:layout_alignTop="@+id/noodleButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tote 5"
+        android:id="@+id/tote5"
+        android:onClick="tote5Change"
+        android:background="#ffafafaf"
+        android:layout_below="@+id/can5Count"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tote 4"
+        android:id="@+id/tote4"
+        android:onClick="tote4Change"
+        android:background="#ffc8c8c8"
+        android:layout_below="@+id/space9"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tote 3"
+        android:id="@+id/tote3"
+        android:onClick="tote3Change"
+        android:background="#ffafafaf"
+        android:layout_below="@+id/space8"
+        android:layout_toLeftOf="@+id/tote4Count"
+        android:layout_toStartOf="@+id/tote4Count" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tote 2"
+        android:id="@+id/tote2"
+        android:onClick="tote2Change"
+        android:background="#ffc8c8c8"
+        android:layout_below="@+id/space7"
+        android:layout_toLeftOf="@+id/tote3Count"
+        android:layout_toStartOf="@+id/tote3Count" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tote 1 "
+        android:id="@+id/tote1"
+        android:onClick="tote1Change"
+        android:background="#ffafafaf"
+        android:layout_below="@+id/space6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Can 6"
+        android:id="@+id/can6"
+        android:onClick="can6Change"
+        android:background="#ff007d00"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Can 5"
+        android:id="@+id/can5"
+        android:onClick="can5Change"
+        android:background="#ff007d00"
+        android:layout_below="@+id/space12"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Can 4"
+        android:id="@+id/can4"
+        android:onClick="can4Change"
+        android:background="#ff007d00"
+        android:layout_below="@+id/space13"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Can 3"
+        android:id="@+id/can3"
+        android:onClick="can3Change"
+        android:background="#ff007d00"
+        android:layout_alignTop="@+id/tote4Count"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Can 2"
+        android:id="@+id/can2"
+        android:onClick="can2Change"
+        android:background="#ff007d00"
+        android:layout_below="@+id/space15"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Can 1 "
+        android:id="@+id/can1"
+        android:onClick="can1Change"
+        android:background="#ff007d00"
+        android:layout_below="@+id/space16"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Space
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/TeamNumber"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/space3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add/Subtract"
+        android:id="@+id/addSubtractButton"
+        android:onClick="addSubtractChange"
+        android:background="#ffff5000"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/space" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/submit"
+        android:onClick="submit"
+        android:layout_below="@+id/autoToteCount"
+        android:layout_centerHorizontal="true"
+        android:background="#ffff5000" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="N     o     o     d      l      e"
+        android:id="@+id/noodleButton"
+        android:onClick="noodleChange"
+        android:background="#ff1eff1e"
+        android:layout_below="@+id/space"
+        android:layout_alignLeft="@+id/space3"
+        android:layout_alignStart="@+id/space3"
+        android:layout_above="@+id/noodleCount"
+        android:layout_alignRight="@+id/space4"
+        android:layout_alignEnd="@+id/space4" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REKT Stacks"
+        android:id="@+id/wreckedStackButton"
+        android:onClick="wreckedStackChange"
+        android:background="#ffff5000"
+        android:layout_below="@+id/space14"
+        android:layout_toRightOf="@+id/can1Count"
+        android:layout_toEndOf="@+id/can1Count" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="----------AUTO----------"
+        android:id="@+id/autoLabel"
+        android:layout_below="@+id/wreckedStackButton"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffbabfb7" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stacked Totes?"
+        android:id="@+id/AutoStack"
+        android:layout_below="@+id/autoLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="autoStack"
+        android:textColor="#ffbabfb7" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auto Totes"
+        android:id="@+id/autoToteButton"
+        android:onClick="autoToteChange"
+        android:layout_alignBottom="@+id/autoCanButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#ffffff00" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auto Cans"
+        android:id="@+id/autoCanButton"
+        android:onClick="autoCanChange"
+        android:background="#ff007d00"
+        android:layout_below="@+id/Mobility"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobility?"
+        android:id="@+id/Mobility"
+        android:checked="false"
+        android:onClick="mobility"
+        android:layout_below="@+id/autoLabel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="#ffbabfb7" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tote6Count"
+        android:layout_alignTop="@+id/tote6"
+        android:layout_toRightOf="@+id/tote6"
+        android:layout_toStartOf="@+id/addSubtractButton"
+        android:maxLines="1"
+        android:maxLength="2"
+        android:layout_alignBottom="@+id/tote6"
+        android:layout_toLeftOf="@+id/addSubtractButton"
+        android:textColor="#ffc8c8c8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tote5Count"
+        android:layout_toRightOf="@+id/tote5"
+        android:layout_alignBottom="@+id/tote5"
+        android:maxLines="1"
+        android:layout_alignRight="@+id/tote6Count"
+        android:layout_alignEnd="@+id/tote6Count"
+        android:maxLength="2"
+        android:layout_alignTop="@+id/tote5"
+        android:textColor="#ffafafaf" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tote4Count"
+        android:layout_alignTop="@+id/tote4"
+        android:layout_toRightOf="@+id/tote4"
+        android:layout_alignRight="@+id/tote5Count"
+        android:layout_alignEnd="@+id/tote5Count"
+        android:maxLines="1"
+        android:maxLength="2"
+        android:layout_alignBottom="@+id/tote4"
+        android:textColor="#ffc8c8c8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tote3Count"
+        android:layout_alignTop="@+id/tote3"
+        android:layout_toRightOf="@+id/tote3"
+        android:layout_alignRight="@+id/tote4Count"
+        android:layout_alignEnd="@+id/tote4Count"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:layout_alignBottom="@+id/tote3"
+        android:textColor="#ffafafaf" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tote2Count"
+        android:layout_toRightOf="@+id/tote2"
+        android:maxLines="1"
+        android:maxLength="2"
+        android:layout_alignBottom="@+id/tote2"
+        android:layout_alignRight="@+id/tote3Count"
+        android:layout_alignEnd="@+id/tote3Count"
+        android:layout_alignTop="@+id/tote2"
+        android:textColor="#ffc8c8c8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tote1Count"
+        android:layout_alignTop="@+id/tote1"
+        android:layout_toRightOf="@+id/tote1"
+        android:layout_alignBottom="@+id/tote1"
+        android:layout_alignRight="@+id/tote2Count"
+        android:layout_alignEnd="@+id/tote2Count"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:textColor="#ffafafaf" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/noodleCount"
+        android:maxLines="1"
+        android:maxLength="2"
+        android:textColor="#ffafafaf"
+        android:layout_alignTop="@+id/can1Count"
+        android:layout_alignLeft="@+id/space5"
+        android:layout_alignStart="@+id/space5"
+        android:layout_alignRight="@+id/space4"
+        android:layout_alignEnd="@+id/space4"
+        android:layout_alignBottom="@+id/can1Count" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/can6Count"
+        android:layout_alignTop="@+id/can6"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:layout_toLeftOf="@+id/can6"
+        android:layout_toEndOf="@+id/space17"
+        android:layout_alignBottom="@+id/can6"
+        android:textColor="#ffafafaf"
+        android:layout_toRightOf="@+id/space17" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/can5Count"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:layout_above="@+id/can4"
+        android:layout_alignLeft="@+id/can6Count"
+        android:layout_alignStart="@+id/can6Count"
+        android:layout_alignTop="@+id/can5"
+        android:layout_toLeftOf="@+id/can5"
+        android:layout_toStartOf="@+id/can5"
+        android:textColor="#ffafafaf" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/can4Count"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:layout_alignTop="@+id/can4"
+        android:layout_toLeftOf="@+id/can4"
+        android:layout_alignLeft="@+id/can5Count"
+        android:layout_alignStart="@+id/can5Count"
+        android:layout_alignBottom="@+id/can4"
+        android:textColor="#ffafafaf" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/can3Count"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:layout_alignLeft="@+id/can4Count"
+        android:layout_alignStart="@+id/can4Count"
+        android:layout_toLeftOf="@+id/can3"
+        android:layout_toStartOf="@+id/can3"
+        android:layout_alignBottom="@+id/can3"
+        android:layout_alignTop="@+id/can3"
+        android:textColor="#ffafafaf" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/can2Count"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:layout_toLeftOf="@+id/can2"
+        android:layout_alignLeft="@+id/can3Count"
+        android:layout_alignStart="@+id/can3Count"
+        android:layout_alignBottom="@+id/can2"
+        android:layout_alignTop="@+id/can2"
+        android:textColor="#ffafafaf" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/can1Count"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:layout_alignTop="@+id/can1"
+        android:layout_alignLeft="@+id/can2Count"
+        android:layout_alignStart="@+id/can2Count"
+        android:layout_alignBottom="@+id/can1"
+        android:layout_alignRight="@+id/can3Count"
+        android:layout_alignEnd="@+id/can3Count"
+        android:textColor="#ffafafaf" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/wreckedStackCount"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:layout_alignTop="@+id/wreckedStackButton"
+        android:layout_alignBottom="@+id/wreckedStackButton"
+        android:layout_toLeftOf="@+id/wreckedStackButton"
+        android:textColor="#ffafafaf"
+        android:layout_alignLeft="@+id/can1Count"
+        android:layout_alignStart="@+id/can1Count" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/autoToteCount"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:layout_below="@+id/AutoStack"
+        android:layout_toRightOf="@+id/autoToteButton"
+        android:layout_alignBottom="@+id/autoToteButton"
+        android:layout_toLeftOf="@+id/submit"
+        android:layout_toStartOf="@+id/submit"
+        android:textColor="#ffafafaf" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/autoCanCount"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:textAlignment="inherit"
+        android:layout_above="@+id/submit"
+        android:layout_alignTop="@+id/autoCanButton"
+        android:layout_toLeftOf="@+id/autoCanButton"
+        android:layout_toEndOf="@+id/submit"
+        android:layout_alignLeft="@+id/wreckedStackCount"
+        android:layout_alignStart="@+id/wreckedStackCount"
+        android:textColor="#ffafafaf" />
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_below="@+id/autoLabel"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/space5" />
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_alignBottom="@+id/wreckedStackButton"
+        android:layout_toRightOf="@+id/space3"
+        android:layout_toEndOf="@+id/space3"
+        android:id="@+id/space4" />
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_above="@+id/autoLabel"
+        android:layout_toLeftOf="@+id/noodleCount"
+        android:layout_toStartOf="@+id/noodleCount"
+        android:id="@+id/space11" />
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:id="@+id/space6"
+        android:layout_below="@+id/tote2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:id="@+id/space7"
+        android:layout_below="@+id/tote3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:id="@+id/space8"
+        android:layout_below="@+id/tote4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:id="@+id/space9"
+        android:layout_below="@+id/tote5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_alignTop="@+id/can5Count"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/space10" />
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_below="@+id/can6"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/space12" />
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_below="@+id/can5"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/space13" />
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_below="@+id/can4"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_below="@+id/can3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/space15" />
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_below="@+id/can2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/space16" />
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_below="@+id/can1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/space14" />
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_above="@+id/space"
+        android:layout_toRightOf="@+id/addSubtractButton"
+        android:layout_toEndOf="@+id/addSubtractButton"
+        android:id="@+id/space17" />
+
+</RelativeLayout>
