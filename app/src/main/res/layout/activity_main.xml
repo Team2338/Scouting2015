@@ -682,4 +682,12 @@
         android:layout_toEndOf="@+id/addSubtractButton"
         android:id="@+id/space17" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/logo_2338"
+        android:layout_above="@+id/autoLabel"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

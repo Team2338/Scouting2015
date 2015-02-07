@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.content.Context;
 import android.widget.*;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -177,10 +176,6 @@ public class MainActivity extends ActionBarActivity {
         textView.setText(Integer.toString(noodle));
     }
     public void wreckedStackChange(View view){
-        Context context = getApplicationContext();
-        CharSequence text = "Stack REKT";
-        int duration = Toast.LENGTH_SHORT;
-        Toast.makeText(context, text, duration).show();
         if(addsub){
             Toast.makeText(getApplicationContext(), "Stack REKT", Toast.LENGTH_SHORT).show();
             wreckedStack++;
@@ -229,27 +224,18 @@ public class MainActivity extends ActionBarActivity {
     public void autoStack(View view){
         autoStack = ((CheckBox) view).isChecked();
         if(autoStack){
-            Context context = getApplicationContext();
-            CharSequence text = "Auto Stack";
-            int duration = Toast.LENGTH_SHORT;
-            Toast.makeText(context, text, duration).show();
+            Toast.makeText(getApplicationContext(), "Auto Stack", Toast.LENGTH_SHORT).show();
         }
     }
     public void mobility(View view){
         mobility = ((CheckBox) view).isChecked();
         if(mobility){
-            Context context = getApplicationContext();
-            CharSequence text = "Mobility";
-            int duration = Toast.LENGTH_SHORT;
-            Toast.makeText(context, text, duration).show();
+            Toast.makeText(getApplicationContext(), "Mobility", Toast.LENGTH_SHORT).show();
         }
     }
 
     public void submit(View view){
-        Context context = getApplicationContext();
-        CharSequence text = "Saved to Device";
-        int duration = Toast.LENGTH_SHORT;
-        Toast.makeText(context, text, duration).show();
+        Toast.makeText(getApplicationContext(), "Saved To Device", Toast.LENGTH_SHORT).show();
         EditText team = (EditText) findViewById(R.id.TeamNumber);
         EditText match = (EditText) findViewById(R.id.MatchNumber);
         teamNumber = Integer.parseInt(team.getText().toString());
@@ -396,10 +382,7 @@ public class MainActivity extends ActionBarActivity {
         wsset.setText(Integer.toString(wreckedStack));
         TextView nset = (TextView) findViewById(R.id.noodleCount);
         nset.setText(Integer.toString(noodle));
-        Context context = getApplicationContext();
-        CharSequence text = "Brought to you by\n First team 2338\n Gear It Forward";
-        int duration = Toast.LENGTH_LONG;
-        Toast.makeText(context, text, duration).show();
+        Toast.makeText(getApplicationContext(), "Brought to you by\n First team 2338\n Gear It Forward", Toast.LENGTH_LONG).show();
     }
 
 
