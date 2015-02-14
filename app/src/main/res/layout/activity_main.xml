@@ -224,7 +224,9 @@
         android:background="#ff007d00"
         android:layout_below="@+id/space16"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/wreckedStackButton"
+        android:layout_alignStart="@+id/wreckedStackButton" />
 
     <Space
         android:layout_width="20dp"
@@ -257,7 +259,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="N     o     o     d      l      e"
+        android:text="L\nI\nT\nT\nE\nR"
         android:id="@+id/noodleButton"
         android:onClick="noodleChange"
         android:background="#ff1eff1e"
@@ -427,11 +429,11 @@
         android:maxLength="2"
         android:textColor="#ffafafaf"
         android:layout_alignTop="@+id/can1Count"
-        android:layout_alignLeft="@+id/space5"
-        android:layout_alignStart="@+id/space5"
         android:layout_alignRight="@+id/space4"
         android:layout_alignEnd="@+id/space4"
-        android:layout_alignBottom="@+id/can1Count" />
+        android:layout_alignBottom="@+id/can1Count"
+        android:layout_alignLeft="@+id/noodleButton"
+        android:layout_alignStart="@+id/noodleButton" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -442,9 +444,9 @@
         android:maxLength="2"
         android:maxLines="1"
         android:layout_toLeftOf="@+id/can6"
-        android:layout_toEndOf="@+id/space17"
         android:layout_alignBottom="@+id/can6"
         android:textColor="#ffafafaf"
+        android:layout_toEndOf="@+id/space17"
         android:layout_toRightOf="@+id/space17" />
 
     <TextView
@@ -559,10 +561,10 @@
         android:layout_above="@+id/submit"
         android:layout_alignTop="@+id/autoCanButton"
         android:layout_toLeftOf="@+id/autoCanButton"
-        android:layout_toEndOf="@+id/submit"
-        android:layout_alignLeft="@+id/wreckedStackCount"
-        android:layout_alignStart="@+id/wreckedStackCount"
-        android:textColor="#ffafafaf" />
+        android:textColor="#ffafafaf"
+        android:layout_alignLeft="@+id/space17"
+        android:layout_alignStart="@+id/space17"
+        android:layout_toEndOf="@+id/submit" />
 
     <Space
         android:layout_width="20px"
@@ -674,14 +676,6 @@
         android:layout_alignParentEnd="true"
         android:id="@+id/space14" />
 
-    <Space
-        android:layout_width="20px"
-        android:layout_height="20px"
-        android:layout_above="@+id/space"
-        android:layout_toRightOf="@+id/addSubtractButton"
-        android:layout_toEndOf="@+id/addSubtractButton"
-        android:id="@+id/space17" />
-
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -689,5 +683,13 @@
         android:src="@drawable/logo_2338"
         android:layout_above="@+id/autoLabel"
         android:layout_centerHorizontal="true" />
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_alignBottom="@+id/addSubtractButton"
+        android:layout_toRightOf="@+id/addSubtractButton"
+        android:layout_below="@+id/addSubtractButton"
+        android:id="@+id/space17" />
 
 </RelativeLayout>

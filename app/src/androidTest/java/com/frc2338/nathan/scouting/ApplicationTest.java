@@ -1,4 +1,4 @@
-package com.example.nathan.scouting;
+package com.frc2338.nathan.scouting;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

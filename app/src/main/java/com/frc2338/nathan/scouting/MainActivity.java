@@ -1,5 +1,5 @@
-
-package com.example.nathan.scouting;
+//zipalign -f -v 4 app-release-unaligned.apk app-release-aligned.apk
+package com.frc2338.nathan.scouting;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -21,7 +21,6 @@ public class MainActivity extends ActionBarActivity {
 
     public void tote6Change(View view) {
         if(addsub){
-            Toast.makeText(getApplicationContext(), "Tote 6", Toast.LENGTH_SHORT).show();
         tote6++;
         }else if (tote6 == 0) {
             Toast.makeText(getApplicationContext(), "Cannot have negative", Toast.LENGTH_SHORT).show();
@@ -33,7 +32,6 @@ public class MainActivity extends ActionBarActivity {
 }
     public void tote5Change(View view){
         if(addsub){
-            Toast.makeText(getApplicationContext(), "Tote 5", Toast.LENGTH_SHORT).show();
             tote5++;
         }else if (tote5 == 0) {
             Toast.makeText(getApplicationContext(), "Cannot have negative", Toast.LENGTH_SHORT).show();
@@ -45,7 +43,6 @@ public class MainActivity extends ActionBarActivity {
     }
     public void tote4Change(View view){
         if(addsub){
-            Toast.makeText(getApplicationContext(), "Tote 4", Toast.LENGTH_SHORT).show();
             tote4++;
         }else if (tote4 == 0) {
             Toast.makeText(getApplicationContext(), "Cannot have negative", Toast.LENGTH_SHORT).show();
@@ -57,7 +54,6 @@ public class MainActivity extends ActionBarActivity {
     }
     public void tote3Change(View view){
         if(addsub){
-            Toast.makeText(getApplicationContext(), "Tote 3", Toast.LENGTH_SHORT).show();
             tote3++;
         }else if (tote3 == 0) {
             Toast.makeText(getApplicationContext(), "Cannot have negative", Toast.LENGTH_SHORT).show();
@@ -69,7 +65,6 @@ public class MainActivity extends ActionBarActivity {
     }
     public void tote2Change(View view){
         if(addsub){
-            Toast.makeText(getApplicationContext(), "Tote 2", Toast.LENGTH_SHORT).show();
             tote2++;
         }else if (tote2 == 0) {
             Toast.makeText(getApplicationContext(), "Cannot have negative", Toast.LENGTH_SHORT).show();
@@ -81,7 +76,6 @@ public class MainActivity extends ActionBarActivity {
     }
     public void tote1Change(View view){
         if(addsub){
-            Toast.makeText(getApplicationContext(), "Tote 1", Toast.LENGTH_SHORT).show();
             tote1++;
         }else if (tote1 == 0) {
             Toast.makeText(getApplicationContext(), "Cannot have negative", Toast.LENGTH_SHORT).show();
@@ -93,7 +87,6 @@ public class MainActivity extends ActionBarActivity {
     }
     public void can6Change(View view){
         if (addsub) {
-            Toast.makeText(getApplicationContext(), "Can 6", Toast.LENGTH_SHORT).show();
             can6++;
         }else if (can6 == 0) {
             Toast.makeText(getApplicationContext(), "Cannot have negative", Toast.LENGTH_SHORT).show();
@@ -105,7 +98,6 @@ public class MainActivity extends ActionBarActivity {
     }
     public void can5Change(View view){
         if (addsub) {
-            Toast.makeText(getApplicationContext(), "Can 5", Toast.LENGTH_SHORT).show();
             can5++;
         }else if (can5 == 0) {
             Toast.makeText(getApplicationContext(), "Cannot have negative", Toast.LENGTH_SHORT).show();
@@ -117,7 +109,6 @@ public class MainActivity extends ActionBarActivity {
     }
     public void can4Change(View view){
         if (addsub) {
-            Toast.makeText(getApplicationContext(), "Can 4", Toast.LENGTH_SHORT).show();
             can4++;
         }else if (can4 == 0) {
             Toast.makeText(getApplicationContext(), "Cannot have negative", Toast.LENGTH_SHORT).show();
@@ -129,7 +120,6 @@ public class MainActivity extends ActionBarActivity {
     }
     public void can3Change(View view){
         if(addsub){
-            Toast.makeText(getApplicationContext(), "Can 3", Toast.LENGTH_SHORT).show();
             can3++;
         }else if (can3 == 0) {
             Toast.makeText(getApplicationContext(), "Cannot have negative", Toast.LENGTH_SHORT).show();
@@ -141,7 +131,6 @@ public class MainActivity extends ActionBarActivity {
     }
     public void can2Change(View view){
         if(addsub){
-            Toast.makeText(getApplicationContext(), "Can 2", Toast.LENGTH_SHORT).show();
             can2++;
         }else if (can2 == 0) {
             Toast.makeText(getApplicationContext(), "Cannot have negative", Toast.LENGTH_SHORT).show();
@@ -153,7 +142,6 @@ public class MainActivity extends ActionBarActivity {
     }
     public void can1Change(View view){
         if(addsub){
-            Toast.makeText(getApplicationContext(), "Can 1", Toast.LENGTH_SHORT).show();
             can1++;
         }else if (can1 == 0) {
             Toast.makeText(getApplicationContext(), "Cannot have negative", Toast.LENGTH_SHORT).show();
@@ -199,7 +187,6 @@ public class MainActivity extends ActionBarActivity {
     }
     public void autoToteChange(View view){
         if(addsub){
-            Toast.makeText(getApplicationContext(), "Auto Tote", Toast.LENGTH_SHORT).show();
             autoTote++;
         }else if (autoTote == 0) {
             Toast.makeText(getApplicationContext(), "Cannot have negative", Toast.LENGTH_SHORT).show();
@@ -211,7 +198,6 @@ public class MainActivity extends ActionBarActivity {
     }
     public void autoCanChange(View view){
         if(addsub){
-            Toast.makeText(getApplicationContext(), "Auto Can", Toast.LENGTH_SHORT).show();
             autoCan++;
         }else if (autoCan == 0) {
             Toast.makeText(getApplicationContext(), "Cannot have negative", Toast.LENGTH_SHORT).show();
@@ -241,7 +227,7 @@ public class MainActivity extends ActionBarActivity {
         teamNumber = Integer.parseInt(team.getText().toString());
         matchNumber = Integer.parseInt(match.getText().toString());
         try{
-            FileWriter writer = new FileWriter("/sdcard/scouting.txt", true);
+            FileWriter writer = new FileWriter("/sdcard/scouting.csv", true);
             writer.append(Integer.toString(matchNumber));
             writer.append(',');
             writer.append(Integer.toString(teamNumber));
