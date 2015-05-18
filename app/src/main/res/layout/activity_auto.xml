@@ -1,0 +1,402 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp" tools:context=".Teleop"
+    android:background="#ff02243e"
+    android:id="@+id/activity_auto"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:padding="5dp">
+
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Stacked Auto Totes"
+        android:id="@+id/AutoStack"
+        android:onClick="autoStack"
+        android:textColor="#ffbabfb7"
+        android:focusable="true"
+        android:textSize="16dp"
+        android:checked="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/addSubtract"
+        android:layout_toStartOf="@+id/addSubtract" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:text="Auto Totes"
+        android:id="@+id/autoToteButton"
+        android:onClick="autoToteChange"
+        android:background="#ffffff00"
+        android:focusable="true"
+        android:layout_below="@+id/canAuto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/clearAll"
+        android:layout_alignEnd="@+id/clearAll" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:text="Auto Cans"
+        android:id="@+id/autoCanButton"
+        android:onClick="autoCanChange"
+        android:background="#ff009600"
+        android:focusable="true"
+        android:layout_below="@+id/canAuto"
+        android:layout_alignLeft="@+id/submitButton"
+        android:layout_alignStart="@+id/submitButton" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Mobility"
+        android:id="@+id/Mobility"
+        android:checked="false"
+        android:onClick="mobility"
+        android:textColor="#ffbabfb7"
+        android:focusable="true"
+        android:textSize="16dp"
+        android:layout_below="@+id/addSubtract"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/addSubtract"
+        android:layout_toStartOf="@+id/addSubtract" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left|center_vertical"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/autoToteCount"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:layout_toRightOf="@+id/autoToteButton"
+        android:layout_alignBottom="@+id/autoToteButton"
+        android:layout_toStartOf="@+id/addSubtract"
+        android:textColor="#ffafafaf"
+        android:layout_alignTop="@+id/autoToteButton"
+        android:layout_toLeftOf="@+id/addSubtract"
+        android:paddingLeft="1dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right|center_vertical"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/autoCanCount"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:textAlignment="inherit"
+        android:textColor="#ffafafaf"
+        android:layout_alignTop="@+id/autoCanButton"
+        android:layout_alignBottom="@+id/autoCanButton"
+        android:layout_toLeftOf="@+id/autoCanButton"
+        android:layout_toRightOf="@+id/addSubtract"
+        android:layout_toEndOf="@+id/addSubtract"
+        android:paddingRight="1dp" />
+
+    <Space
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/space5"
+        android:layout_below="@+id/wreckedStackButton" />
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/logo"
+        android:src="@drawable/logo"
+        android:clickable="true"
+        android:onClick="team2338"
+        android:focusable="true"
+        android:layout_below="@+id/space2"
+        android:layout_alignRight="@+id/submitButton"
+        android:layout_alignEnd="@+id/submitButton" />
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:text="Back To Teleop"
+        android:id="@+id/submitButton"
+        android:background="#ffbebebe"
+        android:textColor="#ff000000"
+        android:onClick="toTele"
+        android:focusable="true"
+        android:layout_below="@+id/space23"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:text="Add"
+        android:id="@+id/addSubtract"
+        android:onClick="addSubtractChange"
+        android:background="#fffe6400"
+        android:focusable="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:text="CLEAR ALL"
+        android:id="@+id/clearAll"
+        android:textColor="#ff000000"
+        android:background="#ffff0000"
+        android:onClick="clearAll"
+        android:focusable="true"
+        android:layout_below="@+id/space22"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+
+
+    <Space
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/space21"
+        android:layout_below="@+id/processedLitter"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:layout_width="48dp"
+        android:layout_height="24dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Here"
+        android:id="@+id/link"
+        android:textColor="#ff00a0ff"
+        android:clickable="true"
+        android:onClick="teamUrl"
+        android:focusable="true"
+        android:layout_alignTop="@+id/linkText"
+        android:layout_toRightOf="@+id/linkText"
+        android:layout_toEndOf="@+id/linkText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="For more information and other tools, click "
+        android:id="@+id/linkText"
+        android:textColor="#ffbebebe"
+        android:layout_above="@+id/fileNameText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="14dp" />
+
+    <Space
+        android:layout_width="15dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/autoToteButton"
+        android:layout_toRightOf="@+id/autoToteButton"
+        android:layout_toEndOf="@+id/autoToteButton"
+        android:id="@+id/space22" />
+
+    <Space
+        android:layout_width="15dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/autoCanButton"
+        android:layout_toLeftOf="@+id/autoCanButton"
+        android:layout_toStartOf="@+id/autoCanButton"
+        android:id="@+id/space23" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:id="@+id/space4"
+        android:layout_below="@+id/Mobility"
+        android:layout_alignLeft="@+id/Mobility"
+        android:layout_alignStart="@+id/Mobility" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="File Name:"
+        android:id="@+id/fileNameText"
+        android:textColor="#ffbebebe"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="visible"
+        android:paddingRight="1dp" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameLine"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/fileNameText"
+        android:layout_toEndOf="@+id/fileNameText"
+        android:background="#ffbebebe"
+        android:layout_alignTop="@+id/fileNameText"
+        android:visibility="visible" />
+
+    <Space
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_below="@+id/clearAll"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/space2" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Placed Co-Op Totes"
+        android:id="@+id/coopStack"
+        android:textColor="#ffbebebe"
+        android:textSize="16dp"
+        android:onClick="coopStack"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/wreckedCoop"
+        android:layout_alignStart="@+id/wreckedCoop" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Rate This App!"
+        android:id="@+id/rateLink"
+        android:layout_above="@+id/linkText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ff00a0ff"
+        android:clickable="true"
+        android:onClick="ratingLink"
+        android:textSize="15dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Prevented Co-Op"
+        android:id="@+id/wreckedCoop"
+        android:textColor="#ffbebebe"
+        android:textSize="16dp"
+        android:onClick="coopWrecked"
+        android:layout_below="@+id/coopStack"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/canTele"
+        android:layout_alignStart="@+id/canTele" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Current Score:"
+        android:id="@+id/scoreLabel"
+        android:layout_below="@+id/space2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffb4b4b4" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/totalScore"
+        android:textColor="#ffc8c8c8"
+        android:text="0"
+        android:onClick="currentScore"
+        android:clickable="true"
+        android:layout_below="@+id/instructions"
+        android:layout_toRightOf="@+id/space4"
+        android:layout_alignRight="@+id/scoreLabel"
+        android:layout_alignEnd="@+id/scoreLabel" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Grabbed Cans\nFrom Step Tele"
+        android:id="@+id/canTele"
+        android:textColor="#ffbebebe"
+        android:textSize="13dp"
+        android:onClick="teleGrab"
+        android:layout_alignTop="@+id/canAuto"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Grabbed Cans From Step Auto"
+        android:id="@+id/canAuto"
+        android:textColor="#ffbebebe"
+        android:textSize="14dp"
+        android:onClick="autoGrab"
+        android:layout_below="@+id/wreckedCoop"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/space5"
+        android:layout_toStartOf="@+id/space5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Click score to update"
+        android:id="@+id/instructions"
+        android:textSize="10dp"
+        android:textColor="#ffb4b4b4"
+        android:layout_below="@+id/scoreLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Space
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:layout_alignTop="@+id/rateLink"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/space3" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/phoneNumber"
+        android:textColor="#ff000000"
+        android:textSize="18dp"
+        android:background="#ffb4b4b4"
+        android:layout_below="@+id/space10"
+        android:layout_alignRight="@+id/submitButton"
+        android:layout_alignEnd="@+id/submitButton"
+        android:layout_toEndOf="@+id/space2"
+        android:layout_alignLeft="@+id/canTele"
+        android:layout_alignStart="@+id/canTele" />
+
+    <Space
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:id="@+id/space10"
+        android:layout_below="@+id/totalScore" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Head scouter&apos;s phone number for data collection (optional)"
+        android:id="@+id/textView2"
+        android:layout_alignTop="@+id/phoneNumber"
+        android:layout_toLeftOf="@+id/phoneNumber"
+        android:layout_toStartOf="@+id/phoneNumber"
+        android:textColor="#ffbebebe"
+        android:gravity="right"
+        android:paddingRight="2dp"
+        android:textSize="14dp" />
+
+</RelativeLayout>

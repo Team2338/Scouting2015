@@ -1,10 +1,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:background="#ff02243e">
+    android:layout_height="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    tools:context=".MainActivity"
+    android:background="#ff02243e"
+    android:padding="5dp">
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,7 +18,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textColor="#ffc8c8c8" />
+        android:textColor="#ffc8c8c8"
+        android:paddingRight="1dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -32,7 +36,8 @@
         android:layout_alignRight="@+id/space"
         android:layout_alignEnd="@+id/space"
         android:layout_alignLeft="@+id/MatchNumber"
-        android:layout_alignStart="@+id/MatchNumber" />
+        android:layout_alignStart="@+id/MatchNumber"
+        android:focusable="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,10 +45,10 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Match #:"
         android:id="@+id/matchLabel"
-        android:layout_below="@+id/teamlabel"
+        android:textColor="#ffafafaf"
+        android:layout_below="@+id/space"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="#ffafafaf" />
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -51,48 +56,25 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/MatchNumber"
-        android:layout_below="@+id/teamlabel"
-        android:layout_alignBottom="@+id/matchLabel"
         android:textColor="#ff000000"
         android:maxLength="3"
         android:maxLines="1"
         android:background="#ffafafaf"
+        android:layout_below="@+id/space"
         android:layout_alignRight="@+id/space"
         android:layout_alignEnd="@+id/space"
         android:layout_toRightOf="@+id/matchLabel"
-        android:layout_toEndOf="@+id/matchLabel" />
-
-    <Space
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/matchLabel"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/space2" />
-
-    <Space
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/matchLabel"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Space
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/matchLabel"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Space
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/MatchNumber"
-        android:layout_toRightOf="@+id/matchLabel"
         android:layout_toEndOf="@+id/matchLabel"
-        android:layout_marginLeft="26dp"
-        android:layout_marginStart="26dp"
-        android:id="@+id/space" />
+        android:layout_alignBottom="@+id/matchLabel"
+        android:focusable="true" />
+
+    <Space
+        android:layout_width="18dp"
+        android:layout_height="8dp"
+        android:id="@+id/space"
+        android:layout_below="@+id/TeamNumber"
+        android:layout_toRightOf="@+id/tote6"
+        android:layout_toEndOf="@+id/tote6" />
 
     <Button
         android:layout_width="wrap_content"
@@ -102,8 +84,11 @@
         android:onClick="tote6Change"
         android:background="#ffc8c8c8"
         android:layout_alignTop="@+id/noodleButton"
+        android:layout_alignRight="@+id/tote5"
+        android:layout_alignEnd="@+id/tote5"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:focusable="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -112,9 +97,12 @@
         android:id="@+id/tote5"
         android:onClick="tote5Change"
         android:background="#ffafafaf"
-        android:layout_below="@+id/can5Count"
+        android:layout_alignTop="@+id/can4Count"
+        android:layout_alignRight="@+id/tote4"
+        android:layout_alignEnd="@+id/tote4"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:focusable="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -124,8 +112,11 @@
         android:onClick="tote4Change"
         android:background="#ffc8c8c8"
         android:layout_below="@+id/space9"
+        android:layout_alignRight="@+id/tote3"
+        android:layout_alignEnd="@+id/tote3"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:focusable="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -134,23 +125,29 @@
         android:id="@+id/tote3"
         android:onClick="tote3Change"
         android:background="#ffafafaf"
+        android:focusable="true"
         android:layout_below="@+id/space8"
-        android:layout_toLeftOf="@+id/tote4Count"
-        android:layout_toStartOf="@+id/tote4Count" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/tote2"
+        android:layout_alignEnd="@+id/tote2" />
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:text="Tote 2"
         android:id="@+id/tote2"
         android:onClick="tote2Change"
         android:background="#ffc8c8c8"
-        android:layout_below="@+id/space7"
-        android:layout_toLeftOf="@+id/tote3Count"
-        android:layout_toStartOf="@+id/tote3Count" />
+        android:layout_above="@+id/space14"
+        android:layout_alignRight="@+id/tote1"
+        android:layout_alignEnd="@+id/tote1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:focusable="true" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:text="Tote 1 "
         android:id="@+id/tote1"
@@ -158,7 +155,8 @@
         android:background="#ffafafaf"
         android:layout_below="@+id/space6"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:focusable="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -166,10 +164,13 @@
         android:text="Can 6"
         android:id="@+id/can6"
         android:onClick="can6Change"
-        android:background="#ff007d00"
-        android:layout_alignParentTop="true"
+        android:background="#ff009600"
+        android:layout_alignTop="@+id/addSubtract"
+        android:layout_alignLeft="@+id/can5"
+        android:layout_alignStart="@+id/can5"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:focusable="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -177,10 +178,13 @@
         android:text="Can 5"
         android:id="@+id/can5"
         android:onClick="can5Change"
-        android:background="#ff007d00"
+        android:background="#ff009600"
         android:layout_below="@+id/space12"
+        android:layout_alignLeft="@+id/can4"
+        android:layout_alignStart="@+id/can4"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:focusable="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -188,10 +192,13 @@
         android:text="Can 4"
         android:id="@+id/can4"
         android:onClick="can4Change"
-        android:background="#ff007d00"
+        android:background="#ff009600"
         android:layout_below="@+id/space13"
+        android:layout_alignLeft="@+id/can3"
+        android:layout_alignStart="@+id/can3"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:focusable="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -199,10 +206,13 @@
         android:text="Can 3"
         android:id="@+id/can3"
         android:onClick="can3Change"
-        android:background="#ff007d00"
-        android:layout_alignTop="@+id/tote4Count"
+        android:background="#ff009600"
+        android:layout_below="@+id/space25"
+        android:layout_alignLeft="@+id/can2"
+        android:layout_alignStart="@+id/can2"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:focusable="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -210,10 +220,13 @@
         android:text="Can 2"
         android:id="@+id/can2"
         android:onClick="can2Change"
-        android:background="#ff007d00"
+        android:background="#ff009600"
         android:layout_below="@+id/space15"
+        android:layout_alignLeft="@+id/can1"
+        android:layout_alignStart="@+id/can1"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:focusable="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -221,138 +234,87 @@
         android:text="Can 1 "
         android:id="@+id/can1"
         android:onClick="can1Change"
-        android:background="#ff007d00"
+        android:background="#ff009600"
         android:layout_below="@+id/space16"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignLeft="@+id/wreckedStackButton"
-        android:layout_alignStart="@+id/wreckedStackButton" />
-
-    <Space
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/TeamNumber"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/space3" />
+        android:layout_alignStart="@+id/wreckedStackButton"
+        android:focusable="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add/Subtract"
-        android:id="@+id/addSubtractButton"
+        android:text="Add"
+        android:id="@+id/addSubtract"
         android:onClick="addSubtractChange"
-        android:background="#ffff5000"
+        android:background="#ffff6400"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/space" />
+        android:layout_alignLeft="@+id/submit"
+        android:layout_alignStart="@+id/submit"
+        android:focusable="true"
+        android:layout_alignBottom="@+id/MatchNumber"
+        android:layout_alignRight="@+id/submit"
+        android:layout_alignEnd="@+id/submit" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:text="Save"
         android:id="@+id/submit"
         android:onClick="submit"
-        android:layout_below="@+id/autoToteCount"
-        android:layout_centerHorizontal="true"
-        android:background="#ffff5000" />
+        android:background="#ffff6400"
+        android:focusable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="85dp"
         android:layout_height="wrap_content"
-        android:text="L\nI\nT\nT\nE\nR"
+        android:text="Litter\nin can"
         android:id="@+id/noodleButton"
         android:onClick="noodleChange"
         android:background="#ff1eff1e"
-        android:layout_below="@+id/space"
-        android:layout_alignLeft="@+id/space3"
-        android:layout_alignStart="@+id/space3"
-        android:layout_above="@+id/noodleCount"
-        android:layout_alignRight="@+id/space4"
-        android:layout_alignEnd="@+id/space4" />
+        android:layout_alignTop="@+id/can5Count"
+        android:focusable="true"
+        android:layout_above="@+id/space13"
+        android:layout_toLeftOf="@+id/can5Count"
+        android:layout_alignLeft="@+id/addSubtract"
+        android:layout_alignStart="@+id/addSubtract" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:text="REKT Stacks"
         android:id="@+id/wreckedStackButton"
         android:onClick="wreckedStackChange"
-        android:background="#ffff5000"
-        android:layout_below="@+id/space14"
-        android:layout_toRightOf="@+id/can1Count"
-        android:layout_toEndOf="@+id/can1Count" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="----------AUTO----------"
-        android:id="@+id/autoLabel"
-        android:layout_below="@+id/wreckedStackButton"
-        android:layout_centerHorizontal="true"
-        android:textColor="#ffbabfb7" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Stacked Totes?"
-        android:id="@+id/AutoStack"
-        android:layout_below="@+id/autoLabel"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="autoStack"
-        android:textColor="#ffbabfb7" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Auto Totes"
-        android:id="@+id/autoToteButton"
-        android:onClick="autoToteChange"
-        android:layout_alignBottom="@+id/autoCanButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="#ffffff00" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Auto Cans"
-        android:id="@+id/autoCanButton"
-        android:onClick="autoCanChange"
-        android:background="#ff007d00"
-        android:layout_below="@+id/Mobility"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mobility?"
-        android:id="@+id/Mobility"
-        android:checked="false"
-        android:onClick="mobility"
-        android:layout_below="@+id/autoLabel"
+        android:background="#ffff6400"
+        android:layout_alignTop="@+id/tote1Count"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:textColor="#ffbabfb7" />
+        android:focusable="true" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left|center_vertical"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/tote6Count"
         android:layout_alignTop="@+id/tote6"
         android:layout_toRightOf="@+id/tote6"
-        android:layout_toStartOf="@+id/addSubtractButton"
+        android:layout_toStartOf="@+id/addSubtract"
         android:maxLines="1"
         android:maxLength="2"
         android:layout_alignBottom="@+id/tote6"
-        android:layout_toLeftOf="@+id/addSubtractButton"
-        android:textColor="#ffc8c8c8" />
+        android:layout_toLeftOf="@+id/addSubtract"
+        android:textColor="#ffc8c8c8"
+        android:textSize="22dp"
+        android:paddingLeft="1dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left|center_vertical"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/tote5Count"
         android:layout_toRightOf="@+id/tote5"
@@ -362,11 +324,13 @@
         android:layout_alignEnd="@+id/tote6Count"
         android:maxLength="2"
         android:layout_alignTop="@+id/tote5"
-        android:textColor="#ffafafaf" />
+        android:textColor="#ffafafaf"
+        android:paddingLeft="1dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left|center_vertical"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/tote4Count"
         android:layout_alignTop="@+id/tote4"
@@ -376,11 +340,13 @@
         android:maxLines="1"
         android:maxLength="2"
         android:layout_alignBottom="@+id/tote4"
-        android:textColor="#ffc8c8c8" />
+        android:textColor="#ffc8c8c8"
+        android:paddingLeft="1dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left|center_vertical"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/tote3Count"
         android:layout_alignTop="@+id/tote3"
@@ -390,11 +356,13 @@
         android:maxLength="2"
         android:maxLines="1"
         android:layout_alignBottom="@+id/tote3"
-        android:textColor="#ffafafaf" />
+        android:textColor="#ffafafaf"
+        android:paddingLeft="1dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left|center_vertical"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/tote2Count"
         android:layout_toRightOf="@+id/tote2"
@@ -404,11 +372,13 @@
         android:layout_alignRight="@+id/tote3Count"
         android:layout_alignEnd="@+id/tote3Count"
         android:layout_alignTop="@+id/tote2"
-        android:textColor="#ffc8c8c8" />
+        android:textColor="#ffc8c8c8"
+        android:paddingLeft="1dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left|center_vertical"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/tote1Count"
         android:layout_alignTop="@+id/tote1"
@@ -418,26 +388,29 @@
         android:layout_alignEnd="@+id/tote2Count"
         android:maxLength="2"
         android:maxLines="1"
-        android:textColor="#ffafafaf" />
+        android:textColor="#ffafafaf"
+        android:paddingLeft="1dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_horizontal|top"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/noodleCount"
         android:maxLines="1"
         android:maxLength="2"
         android:textColor="#ffafafaf"
-        android:layout_alignTop="@+id/can1Count"
-        android:layout_alignRight="@+id/space4"
-        android:layout_alignEnd="@+id/space4"
-        android:layout_alignBottom="@+id/can1Count"
+        android:layout_alignTop="@+id/space13"
         android:layout_alignLeft="@+id/noodleButton"
-        android:layout_alignStart="@+id/noodleButton" />
+        android:layout_alignStart="@+id/noodleButton"
+        android:layout_toLeftOf="@+id/can4Count"
+        android:layout_toStartOf="@+id/can4Count"
+        android:textSize="22dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right|center_vertical"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/can6Count"
         android:layout_alignTop="@+id/can6"
@@ -446,27 +419,31 @@
         android:layout_toLeftOf="@+id/can6"
         android:layout_alignBottom="@+id/can6"
         android:textColor="#ffafafaf"
-        android:layout_toEndOf="@+id/space17"
-        android:layout_toRightOf="@+id/space17" />
+        android:layout_toRightOf="@+id/addSubtract"
+        android:layout_toEndOf="@+id/addSubtract"
+        android:paddingRight="1dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right|center_vertical"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/can5Count"
         android:maxLength="2"
         android:maxLines="1"
-        android:layout_above="@+id/can4"
         android:layout_alignLeft="@+id/can6Count"
         android:layout_alignStart="@+id/can6Count"
         android:layout_alignTop="@+id/can5"
         android:layout_toLeftOf="@+id/can5"
         android:layout_toStartOf="@+id/can5"
-        android:textColor="#ffafafaf" />
+        android:textColor="#ffafafaf"
+        android:layout_alignBottom="@+id/can5"
+        android:paddingRight="1dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right|center_vertical"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/can4Count"
         android:maxLength="2"
@@ -476,11 +453,13 @@
         android:layout_alignLeft="@+id/can5Count"
         android:layout_alignStart="@+id/can5Count"
         android:layout_alignBottom="@+id/can4"
-        android:textColor="#ffafafaf" />
+        android:textColor="#ffafafaf"
+        android:paddingRight="1dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right|center_vertical"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/can3Count"
         android:maxLength="2"
@@ -491,11 +470,13 @@
         android:layout_toStartOf="@+id/can3"
         android:layout_alignBottom="@+id/can3"
         android:layout_alignTop="@+id/can3"
-        android:textColor="#ffafafaf" />
+        android:textColor="#ffafafaf"
+        android:paddingRight="1dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right|center_vertical"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/can2Count"
         android:maxLength="2"
@@ -505,11 +486,13 @@
         android:layout_alignStart="@+id/can3Count"
         android:layout_alignBottom="@+id/can2"
         android:layout_alignTop="@+id/can2"
-        android:textColor="#ffafafaf" />
+        android:textColor="#ffafafaf"
+        android:paddingRight="1dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right|center_vertical"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/can1Count"
         android:maxLength="2"
@@ -520,11 +503,13 @@
         android:layout_alignBottom="@+id/can1"
         android:layout_alignRight="@+id/can3Count"
         android:layout_alignEnd="@+id/can3Count"
-        android:textColor="#ffafafaf" />
+        android:textColor="#ffafafaf"
+        android:paddingRight="1dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right|center_vertical"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/wreckedStackCount"
         android:maxLength="2"
@@ -534,162 +519,185 @@
         android:layout_toLeftOf="@+id/wreckedStackButton"
         android:textColor="#ffafafaf"
         android:layout_alignLeft="@+id/can1Count"
-        android:layout_alignStart="@+id/can1Count" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/autoToteCount"
-        android:maxLength="2"
-        android:maxLines="1"
-        android:layout_below="@+id/AutoStack"
-        android:layout_toRightOf="@+id/autoToteButton"
-        android:layout_alignBottom="@+id/autoToteButton"
-        android:layout_toLeftOf="@+id/submit"
-        android:layout_toStartOf="@+id/submit"
-        android:textColor="#ffafafaf" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/autoCanCount"
-        android:maxLength="2"
-        android:maxLines="1"
-        android:textAlignment="inherit"
-        android:layout_above="@+id/submit"
-        android:layout_alignTop="@+id/autoCanButton"
-        android:layout_toLeftOf="@+id/autoCanButton"
-        android:textColor="#ffafafaf"
-        android:layout_alignLeft="@+id/space17"
-        android:layout_alignStart="@+id/space17"
-        android:layout_toEndOf="@+id/submit" />
+        android:layout_alignStart="@+id/can1Count"
+        android:paddingRight="1dp" />
 
     <Space
-        android:layout_width="20px"
-        android:layout_height="20px"
-        android:layout_below="@+id/autoLabel"
+        android:layout_width="15dp"
+        android:layout_height="8dp"
         android:layout_centerHorizontal="true"
-        android:id="@+id/space5" />
+        android:id="@+id/space5"
+        android:layout_below="@+id/wreckedStackButton" />
 
     <Space
-        android:layout_width="20px"
-        android:layout_height="20px"
-        android:layout_alignBottom="@+id/wreckedStackButton"
-        android:layout_toRightOf="@+id/space3"
-        android:layout_toEndOf="@+id/space3"
-        android:id="@+id/space4" />
-
-    <Space
-        android:layout_width="20px"
-        android:layout_height="20px"
-        android:layout_above="@+id/autoLabel"
-        android:layout_toLeftOf="@+id/noodleCount"
-        android:layout_toStartOf="@+id/noodleCount"
-        android:id="@+id/space11" />
-
-    <Space
-        android:layout_width="20px"
-        android:layout_height="20px"
+        android:layout_width="15dp"
+        android:layout_height="8dp"
         android:id="@+id/space6"
         android:layout_below="@+id/tote2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <Space
-        android:layout_width="20px"
-        android:layout_height="20px"
+        android:layout_width="15dp"
+        android:layout_height="8dp"
         android:id="@+id/space7"
         android:layout_below="@+id/tote3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <Space
-        android:layout_width="20px"
-        android:layout_height="20px"
+        android:layout_width="15dp"
+        android:layout_height="8dp"
         android:id="@+id/space8"
         android:layout_below="@+id/tote4"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <Space
-        android:layout_width="20px"
-        android:layout_height="20px"
+        android:layout_width="15dp"
+        android:layout_height="8dp"
         android:id="@+id/space9"
         android:layout_below="@+id/tote5"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <Space
-        android:layout_width="20px"
-        android:layout_height="20px"
-        android:layout_alignTop="@+id/can5Count"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/space10" />
-
-    <Space
-        android:layout_width="20px"
-        android:layout_height="20px"
+        android:layout_width="15dp"
+        android:layout_height="8dp"
         android:layout_below="@+id/can6"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:id="@+id/space12" />
 
     <Space
-        android:layout_width="20px"
-        android:layout_height="20px"
+        android:layout_width="15dp"
+        android:layout_height="8dp"
         android:layout_below="@+id/can5"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:id="@+id/space13" />
 
     <Space
-        android:layout_width="20px"
-        android:layout_height="20px"
+        android:layout_width="15dp"
+        android:layout_height="8dp"
         android:layout_below="@+id/can4"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:id="@+id/space25" />
 
     <Space
-        android:layout_width="20px"
-        android:layout_height="20px"
+        android:layout_width="15dp"
+        android:layout_height="8dp"
         android:layout_below="@+id/can3"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:id="@+id/space15" />
 
     <Space
-        android:layout_width="20px"
-        android:layout_height="20px"
+        android:layout_width="15dp"
+        android:layout_height="8dp"
         android:layout_below="@+id/can2"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:id="@+id/space16" />
 
     <Space
-        android:layout_width="20px"
-        android:layout_height="20px"
+        android:layout_width="15dp"
+        android:layout_height="8dp"
         android:layout_below="@+id/can1"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:id="@+id/space14" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:src="@drawable/logo_2338"
-        android:layout_above="@+id/autoLabel"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/logo"
+        android:src="@drawable/logo"
+        android:onClick="team2338"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_above="@+id/submit"
         android:layout_centerHorizontal="true" />
 
-    <Space
-        android:layout_width="20px"
-        android:layout_height="20px"
-        android:layout_alignBottom="@+id/addSubtractButton"
-        android:layout_toRightOf="@+id/addSubtractButton"
-        android:layout_below="@+id/addSubtractButton"
-        android:id="@+id/space17" />
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="More"
+        android:id="@+id/toAuto"
+        android:background="#ffbabfb7"
+        android:onClick="toAuto"
+        android:focusable="true"
+        android:layout_alignTop="@+id/submit"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="To\nNotes "
+        android:id="@+id/toNotes"
+        android:onClick="toNotes"
+        android:background="#ffc8c8c8"
+        android:layout_alignTop="@+id/submit"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:focusable="true" />
+
+    <Button
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:text="Processed\nLitter"
+        android:id="@+id/processedLitter"
+        android:background="#ff1eff1e"
+        android:onClick="processLitter"
+        android:focusable="true"
+        android:layout_below="@+id/noodleCount"
+        android:layout_alignLeft="@+id/noodleCount"
+        android:layout_alignStart="@+id/noodleCount"
+        android:layout_alignRight="@+id/noodleCount"
+        android:layout_alignEnd="@+id/noodleCount" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_horizontal|top"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/processedLitterCount"
+        android:textColor="#ffbebebe"
+        android:maxLines="1"
+        android:maxLength="2"
+        android:layout_below="@+id/processedLitter"
+        android:layout_alignLeft="@+id/processedLitter"
+        android:layout_toLeftOf="@+id/can3Count"
+        android:layout_toStartOf="@+id/can3Count"
+        android:textSize="22dp" />
+    <Button
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:text="Thrown\nLitter"
+        android:id="@+id/thrownLitter"
+        android:background="#ff1eff1e"
+        android:onClick="thrownLitter"
+        android:focusable="true"
+        android:layout_below="@+id/processedLitterCount"
+        android:layout_alignLeft="@+id/processedLitterCount"
+        android:layout_alignStart="@+id/processedLitterCount"
+        android:layout_toLeftOf="@+id/can2Count"
+        android:layout_toStartOf="@+id/can2Count" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_horizontal|top"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/thrownLitterCount"
+        android:maxLength="2"
+        android:maxLines="1"
+        android:textColor="#ffbebebe"
+        android:layout_toLeftOf="@+id/can2Count"
+        android:layout_alignLeft="@+id/thrownLitter"
+        android:layout_alignStart="@+id/thrownLitter"
+        android:textSize="22dp"
+        android:layout_below="@+id/tote3Count"
+        android:layout_alignBottom="@+id/can1Count" />
 
 </RelativeLayout>
